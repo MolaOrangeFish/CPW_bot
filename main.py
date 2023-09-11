@@ -1,14 +1,7 @@
 import joblib
-from sklearn.feature_extraction.text import CountVectorizer,TfidfVectorizer, TfidfTransformer
 import numpy as np
-import pandas as pd
 import re
-import string
 import deepcut
-from pythainlp import word_tokenize
-from pythainlp.corpus import thai_stopwords
-from pythainlp.corpus import thai_stopwords
-from pythainlp.util import normalize
 
 ##Reply text function##
 def reply_text(txt):
@@ -43,7 +36,7 @@ question_model = joblib.load(open(question_type,"rb"))
 vectorizer_question = joblib.load(open(question_vectorizer,"rb"))
 
 ###GET TEXT FROM CHAT AND CONVERT IT TO ARR###
-recived_txt="ขอตารางเรียน ป6 หน่อยค่ะ"
+recived_txt="ทักษะว่ายเปิดสอนกลุ่มเด็กม.ต้นมั้ยครับ"
 text = [recived_txt]
 
 ####VECTORIZER AND PREDICT SEGMENTATION####
