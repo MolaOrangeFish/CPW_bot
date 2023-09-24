@@ -1,25 +1,38 @@
 import joblib
 import numpy as np
-import re
-import deepcut
+from package.nlp_function import *
+from bag_of_word import bow_dict,scores,temp_category
+
+question = ["ขอ","เมนู","อาหาร","หน่อย","ค่ะ"]
+
+
+for each_ques in question: ##get word from question
+    for cate_name in bow_dict: ##get type detail from dictonary
+            for each_word in bow_dict[cate_name]["words"]:##word matching with ques and bow for each type 
+                  if(each_ques == each_word):
+                        scores[cate_name]+=1
+                        print(f"{cate_name}+1")
+
+max_score_cate = max(scores,key=scores.get)
+if scores[max_score_cate] == 0:  #if category is none
+    print("no category")
+    print(scores)
+else:                                                       #if category not none
+    print(max_score_cate)
+    print(scores)
+    temp_category.append(max_score_cate) 
+print(temp_category)
+
+#####clear list make sure its empty#####
+temp_category.clear()
+scores = dict.fromkeys(scores,0) #empty when sent max score category
+#####clear list make sure its empty#####
+
+"""
 
 ##Reply text function##
 def reply_text(txt):
     print(txt)
-
-##text process##
-def word_split(text):
-    words = re.split(r",",text)
-    return words
-
-def text_process_save_comma(text): ##save ,
-    text = re.sub("\[|\]|'|"," ",text).replace(" ", "")
-    text = re.sub(r'[0-9]+'," ",text).replace(" ", "")
-    return text
-##text process##
-def split_word(text):
-    tokens = deepcut.tokenize(text)
-    return tokens
 
 ####LOAD SEGMENTATION MODEL####
 # 0:Negative 1:Positive 2:Question
@@ -72,5 +85,5 @@ else:
             reply_text("นี่ไม่เกี่ยวไปถาม รร นู่น")
 
 
-
+"""
 
