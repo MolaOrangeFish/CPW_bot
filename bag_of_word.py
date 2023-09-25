@@ -8,13 +8,6 @@ bow_dict = {"period":{"words":['ตาราง',"ตา",'ราง','lesson'],
                     "food":{"words":[ 'อาหาร', 'อิสลาม', 'เมนู',],"sectors":["อาหาร"]},
              }
 
-scores ={"period":0,
-                    "health":0,
-                    "holiday":0,
-                    "place":0,
-                    "sell":0,
-                    "grade_check":0,
-                    "activity":0,
-                    "food":0,
+scores ={"period":0,"health":0,"holiday":0,"place":0,"sell":0,"grade_check":0,"activity":0,"food":0,
              }
 temp_category=[]

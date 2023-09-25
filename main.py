@@ -8,16 +8,19 @@ question = ["ขอ","เมนู","อาหาร","หน่อย","ค่�
 
 for each_ques in question: ##get word from question
     for cate_name in bow_dict: ##get type detail from dictonary
-            for each_word in bow_dict[cate_name]["words"]:##word matching with ques and bow for each type 
-                  if(each_ques == each_word):
-                        scores[cate_name]+=1
-                        print(f"{cate_name}+1")
+        for each_word in bow_dict[cate_name]["words"]:##word matching with ques and bow for each type 
+            if(each_ques == each_word):
+                print(f"each_ques : {each_ques}")
+                print(f"cate_name : {cate_name}")
+                print(f"each_word : {each_word}")
+                scores[cate_name]+=1
+                print(f"{cate_name}+1")
 
 max_score_cate = max(scores,key=scores.get)
-if scores[max_score_cate] == 0:  #if category is none
+if scores[max_score_cate] == 0:  #if category is none (หาประเภทไม่เจอ)
     print("no category")
     print(scores)
-else:                                                       #if category not none
+else:           #if category not none (หาประเภทเจอ)
     print(max_score_cate)
     print(scores)
     temp_category.append(max_score_cate) 
@@ -84,6 +87,6 @@ else:
         else:
             reply_text("นี่ไม่เกี่ยวไปถาม รร นู่น")
 
-
 """
+
 
