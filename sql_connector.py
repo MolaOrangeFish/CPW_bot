@@ -1,12 +1,12 @@
-import mysql.connector #เป็นโมดูลที่ใช้สำหรับเชื่อมต่อและจัดการกับฐานข้อมูล MySQL
+# import mysql.connector #เป็นโมดูลที่ใช้สำหรับเชื่อมต่อและจัดการกับฐานข้อมูล MySQL
 
-# เชื่อมต่อกับ MySQL Database
-connection = mysql.connector.connect(
-  host="localhost",
-  user="root",
-  password="",
-  database="cpw_sql"
-)
+# # เชื่อมต่อกับ MySQL Database
+# connection = mysql.connector.connect(
+#   host="localhost",
+#   user="root",
+#   password="",
+#   database="cpw_sql"
+# )
 
 # สร้าง global ที่มีตัวแปร x1, x2, x3 กำหนดค่าเริ่มต้นของตัวแปร x1, x2, x3 ให้เป็น None
 # global x1 
