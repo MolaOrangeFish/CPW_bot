@@ -16,7 +16,7 @@ from linebot.models import (
 app = Flask(__name__)
 
 ##long live token
-Channel_access_token ='tV3IJ3+GQVAijC1ln2c1HjqR8yIr6Ecs7W/w12HNDq21XLmh5MYBY1K1mkGh26HraJ5snw3WWY8D34V/oQwDjQ69Mg5Sx97+7fGbXEVvnfxDu4HUcOktTtSEYbXyCS1VB55hOuRG0Ap9GbMNcDIpqwdB04t89/1O/w1cDnyilFU='
+Channel_access_token ='zcymAlBmiCjCSIXu8oXvV0lCy/VIPdDrH3d5lPVe+WxmvE5bL+xwVN42hg2/GauQ16W0QjgUm4zfkD/ibPurTQNsJtkGKKpytDD7A58I5OMrtOH3K95tcpaUyvQxqMjKbvwR3lgndlYhILyb1VjdlgdB04t89/1O/w1cDnyilFU='
 line_bot_api = LineBotApi(Channel_access_token)
 
 #function การตอบกลับ

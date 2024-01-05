@@ -4,7 +4,7 @@ import numpy as np
 from function import *
 from sql_connector import *
 from package.nlp_function import *
-from bag_of_word import bow_dict,scores,temp_category
+#from bag_of_word import bow_dict,scores,temp_category
 
 
 # question = ['ตาราง', 'เรียน', 'จะ', 'ออก', 'ช่วง', 'ไหน', 'ครับ']
