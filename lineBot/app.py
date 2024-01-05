@@ -1,6 +1,7 @@
 from flask import Flask, request
 import json
 import numpy as np
+from ai import *
 from linebot import (LineBotApi, WebhookHandler)
 from linebot.models import (
  MessageEvent, TextMessage, TextSendMessage, ImageSendMessage,
